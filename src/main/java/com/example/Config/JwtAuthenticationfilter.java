@@ -59,7 +59,7 @@ public class JwtAuthenticationfilter extends OncePerRequestFilter {
                 SecurityContextHolder.setContext(securityContext);
             }
         }
-        response.addHeader(HttpHeaders.AUTHORIZATION,"Bearer "+authenticationResponse.getToken());
+       // response.addHeader(HttpHeaders.AUTHORIZATION,"Bearer "+authenticationResponse.getToken());
         filterChain.doFilter(request, response);
     }
 }
